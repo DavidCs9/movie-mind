@@ -1,6 +1,7 @@
-const COHERE_API_KEY = 'B94nbu2xiHwXSaL9UdEwm6wOggpM3ypBjwSABvU5'
+const COHERE_API_KEY =  process.env.COHERE_API_KEY;
 const COHERE_API_GENERATE_URL = 'https://api.cohere.ai/generate'
 
+console.log(COHERE_API_KEY)
 
 export async function recommendMovies(moodInput) {
     const data = {
@@ -26,7 +27,6 @@ export async function recommendMovies(moodInput) {
         body: JSON.stringify(data)
         }).then(response => response.json())
     
-    console.log(response.generations[0].text)
 
     return response.generations[0].text
 }
