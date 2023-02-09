@@ -5,9 +5,9 @@ const COHERE_API_GENERATE_URL = 'https://api.cohere.ai/generate'
 export async function recommendMovies(moodInput) {
     const data = {
         model: 'command-xlarge-nightly',
-        prompt: `Write 5 movies names based on the following theme: "${moodInput}"`,
+        prompt: `This is a movie recommender based in a mood. Tell me about three movies describing each in a paragraph, my mood is: ${moodInput}`,
         max_tokens: 300,
-        temperature: 0.9,
+        temperature: 1.5,
         k: 0,
         p: 0.75,
         frequency_penalty:0,
