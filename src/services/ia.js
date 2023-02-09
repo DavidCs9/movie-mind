@@ -1,4 +1,4 @@
-const COHERE_API_KEY =  'B94nbu2xiHwXSaL9UdEwm6wOggpM3ypBjwSABvU5'
+const API_KEY =  process.env.COHERE_API_KEY
 const COHERE_API_GENERATE_URL = 'https://api.cohere.ai/generate'
 
 console.log(COHERE_API_KEY)
@@ -20,7 +20,7 @@ export async function recommendMovies(moodInput) {
     const response 	= await fetch(COHERE_API_GENERATE_URL, {
         method: 'POST',
         headers: {
-            "Authorization": `BEARER ${COHERE_API_KEY}`,
+            "Authorization": `BEARER ${API_KEY}`,
             "Content-Type": 'application/json',
             "Cohere-Version": '2022-12-06'
             },
