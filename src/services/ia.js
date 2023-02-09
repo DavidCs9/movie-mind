@@ -6,7 +6,7 @@ export async function recommendMovies(moodInput) {
     const data = {
         model: 'command-xlarge-nightly',
         prompt: `This is a movie recommender based in a mood. Tell me about three movies describing each in a paragraph, my mood is: ${moodInput}`,
-        max_tokens: 300,
+        max_tokens: 400,
         temperature: 1.5,
         k: 0,
         p: 0.75,

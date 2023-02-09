@@ -10,7 +10,7 @@
         promise = recommendMovies(text)
         const value = await promise
         
-        document.getElementById('text').value = value
+        document.getElementById('comment').value = value
         promise = null
 
     }
